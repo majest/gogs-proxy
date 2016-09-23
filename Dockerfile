@@ -5,4 +5,4 @@ RUN apk add curl bash net-tools wget git openssh-client ca-certificates
 VOLUME /root/.ssh
 COPY run.sh /root/run.sh
 COPY nginx.conf /etc/nginx/nginx.conf
-CMD ["bash", "/root/run.sh;", "nginx", "-g", "daemon off;"]
+CMD ["/bin/bash", "/root/run.sh"]
